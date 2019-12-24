@@ -8,12 +8,14 @@ const app = express()
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET, PUT, PATCH, POST, DELETE");
-    res.header("Access-Control-Allow-Headers", "Content-Type");
+    res.header("Access-Control-Allow-Methods", "POST")
+    //res.header("Access-Control-Allow-Methods", "GET, PUT, PATCH, POST, DELETE")
+    res.header("Access-Control-Allow-Headers", "Content-Type")
     next();
 });
 
-app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+// app.use(express.json())
 app.use(fpRoutes)
 
 async function start() {

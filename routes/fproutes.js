@@ -2,8 +2,10 @@ const { Router } = require('express')
 const Model = require('../models/fpmodel')
 const router = Router()
 const uaparser = require('ua-parser-js')
+const atob = require('atob')
 
 router.post('/create', async (req, res) => {
+  let obj = JSON.parse(atob(req.body.data))
   // let hashObj = sha1(JSON.stringify(req.body))
   // let r = hashObj.navigator.connection = {}
   //  await Model.find({ title: hash },(err, fingerprint) => {
@@ -37,11 +39,11 @@ router.post('/create', async (req, res) => {
       cpu: parser.cpu,
       ua: parser.ua
      },
-     navigator: req.body.navigator,
-     screen: req.body.screen,
-     webglparams: req.body.webglparams,
-     fonts: req.body.fonts,
-     body: req.body
+     navigator: obj.navigator,
+     screen: obj.screen,
+     webglparams: obj.webglparams,
+     fonts: obj.fonts,
+     body: obj
   })
   await fingerprint.save((err, fingerprint) => {
     if (err){
