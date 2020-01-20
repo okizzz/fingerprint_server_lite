@@ -89,6 +89,7 @@ const schema = new Schema({
       }
     }
   },
+
   "navigator": {
     "appCodeName": {
       "type": "String"
@@ -115,12 +116,6 @@ const schema = new Schema({
       "saveData": {
         "type": "Boolean"
       }
-    },
-    "oscpu": {
-      "type": "String"
-    },
-    "buildID": {
-      "type": "String"
     },
     "cookieEnabled": {
       "type": "Boolean"
@@ -165,9 +160,6 @@ const schema = new Schema({
     },
     "vendorSub": {
       "type": "String"
-    },
-    "webdriver": {
-      "type": "Boolean"
     }
   },
   "screen": {
@@ -1573,6 +1565,9 @@ const schema = new Schema({
       "ACTIVE_UNIFORMS": {
         "type": "Mixed"
       },
+      "ACTIVE_UNIFORM_BLOCKS": {
+        "type": "Mixed"
+      },
       "ALIASED_LINE_WIDTH_RANGE": {
         "0": {
           "type": "Number"
@@ -1595,7 +1590,16 @@ const schema = new Schema({
       "ALPHA_BITS": {
         "type": "Number"
       },
+      "ALREADY_SIGNALED": {
+        "type": "Mixed"
+      },
       "ALWAYS": {
+        "type": "Mixed"
+      },
+      "ANY_SAMPLES_PASSED": {
+        "type": "Mixed"
+      },
+      "ANY_SAMPLES_PASSED_CONSERVATIVE": {
         "type": "Mixed"
       },
       "ARRAY_BUFFER": {
@@ -1681,7 +1685,55 @@ const schema = new Schema({
       "CLAMP_TO_EDGE": {
         "type": "Mixed"
       },
+      "COLOR": {
+        "type": "Mixed"
+      },
       "COLOR_ATTACHMENT0": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT1": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT2": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT3": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT4": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT5": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT6": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT7": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT8": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT9": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT10": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT11": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT12": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT13": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT14": {
+        "type": "Mixed"
+      },
+      "COLOR_ATTACHMENT15": {
         "type": "Mixed"
       },
       "COLOR_BUFFER_BIT": {
@@ -1705,10 +1757,16 @@ const schema = new Schema({
         "type": ["Boolean"],
         default: undefined
       },
+      "COMPARE_REF_TO_TEXTURE": {
+        "type": "Mixed"
+      },
       "COMPILE_STATUS": {
         "type": "Mixed"
       },
       "COMPRESSED_TEXTURE_FORMATS": {},
+      "CONDITION_SATISFIED": {
+        "type": "Mixed"
+      },
       "CONSTANT_ALPHA": {
         "type": "Mixed"
       },
@@ -1718,6 +1776,18 @@ const schema = new Schema({
       "CONTEXT_LOST_WEBGL": {
         "type": "Mixed"
       },
+      "COPY_READ_BUFFER": {
+        "type": "Mixed"
+      },
+      "COPY_READ_BUFFER_BINDING": {
+        "type": "Mixed"
+      },
+      "COPY_WRITE_BUFFER": {
+        "type": "Mixed"
+      },
+      "COPY_WRITE_BUFFER_BINDING": {
+        "type": "Mixed"
+      },
       "CULL_FACE": {
         "type": "Boolean"
       },
@@ -1725,6 +1795,9 @@ const schema = new Schema({
         "type": "Number"
       },
       "CURRENT_PROGRAM": {
+        "type": "Mixed"
+      },
+      "CURRENT_QUERY": {
         "type": "Mixed"
       },
       "CURRENT_VERTEX_ATTRIB": {
@@ -1740,6 +1813,15 @@ const schema = new Schema({
         "type": "Mixed"
       },
       "DELETE_STATUS": {
+        "type": "Mixed"
+      },
+      "DEPTH": {
+        "type": "Mixed"
+      },
+      "DEPTH24_STENCIL8": {
+        "type": "Mixed"
+      },
+      "DEPTH32F_STENCIL8": {
         "type": "Mixed"
       },
       "DEPTH_ATTACHMENT": {
@@ -1758,6 +1840,12 @@ const schema = new Schema({
         "type": "Mixed"
       },
       "DEPTH_COMPONENT16": {
+        "type": "Mixed"
+      },
+      "DEPTH_COMPONENT24": {
+        "type": "Mixed"
+      },
+      "DEPTH_COMPONENT32F": {
         "type": "Mixed"
       },
       "DEPTH_FUNC": {
@@ -1789,13 +1877,73 @@ const schema = new Schema({
       "DONT_CARE": {
         "type": "Mixed"
       },
+      "DRAW_BUFFER0": {
+        "type": "Number"
+      },
+      "DRAW_BUFFER1": {
+        "type": "Number"
+      },
+      "DRAW_BUFFER2": {
+        "type": "Number"
+      },
+      "DRAW_BUFFER3": {
+        "type": "Number"
+      },
+      "DRAW_BUFFER4": {
+        "type": "Number"
+      },
+      "DRAW_BUFFER5": {
+        "type": "Number"
+      },
+      "DRAW_BUFFER6": {
+        "type": "Number"
+      },
+      "DRAW_BUFFER7": {
+        "type": "Number"
+      },
+      "DRAW_BUFFER8": {
+        "type": "Mixed"
+      },
+      "DRAW_BUFFER9": {
+        "type": "Mixed"
+      },
+      "DRAW_BUFFER10": {
+        "type": "Mixed"
+      },
+      "DRAW_BUFFER11": {
+        "type": "Mixed"
+      },
+      "DRAW_BUFFER12": {
+        "type": "Mixed"
+      },
+      "DRAW_BUFFER13": {
+        "type": "Mixed"
+      },
+      "DRAW_BUFFER14": {
+        "type": "Mixed"
+      },
+      "DRAW_BUFFER15": {
+        "type": "Mixed"
+      },
+      "DRAW_FRAMEBUFFER": {
+        "type": "Mixed"
+      },
+      "DRAW_FRAMEBUFFER_BINDING": {
+        "type": "Mixed"
+      },
       "DST_ALPHA": {
         "type": "Mixed"
       },
       "DST_COLOR": {
         "type": "Mixed"
       },
+      "DYNAMIC_COPY": {
+        "type": "Mixed"
+      },
       "DYNAMIC_DRAW": {
+        "type": "Mixed"
+      },
+      "DYNAMIC_READ": {
         "type": "Mixed"
       },
       "ELEMENT_ARRAY_BUFFER": {
@@ -1813,13 +1961,34 @@ const schema = new Schema({
       "FLOAT": {
         "type": "Mixed"
       },
+      "FLOAT_32_UNSIGNED_INT_24_8_REV": {
+        "type": "Mixed"
+      },
       "FLOAT_MAT2": {
+        "type": "Mixed"
+      },
+      "FLOAT_MAT2x3": {
+        "type": "Mixed"
+      },
+      "FLOAT_MAT2x4": {
         "type": "Mixed"
       },
       "FLOAT_MAT3": {
         "type": "Mixed"
       },
+      "FLOAT_MAT3x2": {
+        "type": "Mixed"
+      },
+      "FLOAT_MAT3x4": {
+        "type": "Mixed"
+      },
       "FLOAT_MAT4": {
+        "type": "Mixed"
+      },
+      "FLOAT_MAT4x2": {
+        "type": "Mixed"
+      },
+      "FLOAT_MAT4x3": {
         "type": "Mixed"
       },
       "FLOAT_VEC2": {
@@ -1834,7 +2003,28 @@ const schema = new Schema({
       "FRAGMENT_SHADER": {
         "type": "Mixed"
       },
+      "FRAGMENT_SHADER_DERIVATIVE_HINT": {
+        "type": "Number"
+      },
       "FRAMEBUFFER": {
+        "type": "Mixed"
+      },
+      "FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE": {
+        "type": "Mixed"
+      },
+      "FRAMEBUFFER_ATTACHMENT_BLUE_SIZE": {
+        "type": "Mixed"
+      },
+      "FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING": {
+        "type": "Mixed"
+      },
+      "FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE": {
+        "type": "Mixed"
+      },
+      "FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE": {
+        "type": "Mixed"
+      },
+      "FRAMEBUFFER_ATTACHMENT_GREEN_SIZE": {
         "type": "Mixed"
       },
       "FRAMEBUFFER_ATTACHMENT_OBJECT_NAME": {
@@ -1843,7 +2033,16 @@ const schema = new Schema({
       "FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE": {
         "type": "Mixed"
       },
+      "FRAMEBUFFER_ATTACHMENT_RED_SIZE": {
+        "type": "Mixed"
+      },
+      "FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE": {
+        "type": "Mixed"
+      },
       "FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE": {
+        "type": "Mixed"
+      },
+      "FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER": {
         "type": "Mixed"
       },
       "FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL": {
@@ -1855,6 +2054,9 @@ const schema = new Schema({
       "FRAMEBUFFER_COMPLETE": {
         "type": "Mixed"
       },
+      "FRAMEBUFFER_DEFAULT": {
+        "type": "Mixed"
+      },
       "FRAMEBUFFER_INCOMPLETE_ATTACHMENT": {
         "type": "Mixed"
       },
@@ -1862,6 +2064,9 @@ const schema = new Schema({
         "type": "Mixed"
       },
       "FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT": {
+        "type": "Mixed"
+      },
+      "FRAMEBUFFER_INCOMPLETE_MULTISAMPLE": {
         "type": "Mixed"
       },
       "FRAMEBUFFER_UNSUPPORTED": {
@@ -1897,6 +2102,9 @@ const schema = new Schema({
       "GREEN_BITS": {
         "type": "Number"
       },
+      "HALF_FLOAT": {
+        "type": "Mixed"
+      },
       "HIGH_FLOAT": {
         "type": "Mixed"
       },
@@ -1918,6 +2126,24 @@ const schema = new Schema({
       "INT": {
         "type": "Mixed"
       },
+      "INTERLEAVED_ATTRIBS": {
+        "type": "Mixed"
+      },
+      "INT_2_10_10_10_REV": {
+        "type": "Mixed"
+      },
+      "INT_SAMPLER_2D": {
+        "type": "Mixed"
+      },
+      "INT_SAMPLER_2D_ARRAY": {
+        "type": "Mixed"
+      },
+      "INT_SAMPLER_3D": {
+        "type": "Mixed"
+      },
+      "INT_SAMPLER_CUBE": {
+        "type": "Mixed"
+      },
       "INT_VEC2": {
         "type": "Mixed"
       },
@@ -1931,6 +2157,9 @@ const schema = new Schema({
         "type": "Mixed"
       },
       "INVALID_FRAMEBUFFER_OPERATION": {
+        "type": "Mixed"
+      },
+      "INVALID_INDEX": {
         "type": "Mixed"
       },
       "INVALID_OPERATION": {
@@ -1987,22 +2216,97 @@ const schema = new Schema({
       "LUMINANCE_ALPHA": {
         "type": "Mixed"
       },
+      "MAX": {
+        "type": "Mixed"
+      },
+      "MAX_3D_TEXTURE_SIZE": {
+        "type": "Number"
+      },
+      "MAX_ARRAY_TEXTURE_LAYERS": {
+        "type": "Number"
+      },
+      "MAX_CLIENT_WAIT_TIMEOUT_WEBGL": {
+        "type": "Number"
+      },
+      "MAX_COLOR_ATTACHMENTS": {
+        "type": "Number"
+      },
+      "MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS": {
+        "type": "Number"
+      },
       "MAX_COMBINED_TEXTURE_IMAGE_UNITS": {
+        "type": "Number"
+      },
+      "MAX_COMBINED_UNIFORM_BLOCKS": {
+        "type": "Number"
+      },
+      "MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS": {
         "type": "Number"
       },
       "MAX_CUBE_MAP_TEXTURE_SIZE": {
         "type": "Number"
       },
+      "MAX_DRAW_BUFFERS": {
+        "type": "Number"
+      },
+      "MAX_ELEMENTS_INDICES": {
+        "type": "Number"
+      },
+      "MAX_ELEMENTS_VERTICES": {
+        "type": "Number"
+      },
+      "MAX_ELEMENT_INDEX": {
+        "type": "Number"
+      },
+      "MAX_FRAGMENT_INPUT_COMPONENTS": {
+        "type": "Number"
+      },
+      "MAX_FRAGMENT_UNIFORM_BLOCKS": {
+        "type": "Number"
+      },
+      "MAX_FRAGMENT_UNIFORM_COMPONENTS": {
+        "type": "Number"
+      },
       "MAX_FRAGMENT_UNIFORM_VECTORS": {
+        "type": "Number"
+      },
+      "MAX_PROGRAM_TEXEL_OFFSET": {
         "type": "Number"
       },
       "MAX_RENDERBUFFER_SIZE": {
         "type": "Number"
       },
+      "MAX_SAMPLES": {
+        "type": "Number"
+      },
+      "MAX_SERVER_WAIT_TIMEOUT": {
+        "type": "Number"
+      },
       "MAX_TEXTURE_IMAGE_UNITS": {
         "type": "Number"
       },
+      "MAX_TEXTURE_LOD_BIAS": {
+        "type": "Number"
+      },
       "MAX_TEXTURE_SIZE": {
+        "type": "Number"
+      },
+      "MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS": {
+        "type": "Number"
+      },
+      "MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS": {
+        "type": "Number"
+      },
+      "MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS": {
+        "type": "Number"
+      },
+      "MAX_UNIFORM_BLOCK_SIZE": {
+        "type": "Number"
+      },
+      "MAX_UNIFORM_BUFFER_BINDINGS": {
+        "type": "Number"
+      },
+      "MAX_VARYING_COMPONENTS": {
         "type": "Number"
       },
       "MAX_VARYING_VECTORS": {
@@ -2011,7 +2315,16 @@ const schema = new Schema({
       "MAX_VERTEX_ATTRIBS": {
         "type": "Number"
       },
+      "MAX_VERTEX_OUTPUT_COMPONENTS": {
+        "type": "Number"
+      },
       "MAX_VERTEX_TEXTURE_IMAGE_UNITS": {
+        "type": "Number"
+      },
+      "MAX_VERTEX_UNIFORM_BLOCKS": {
+        "type": "Number"
+      },
+      "MAX_VERTEX_UNIFORM_COMPONENTS": {
         "type": "Number"
       },
       "MAX_VERTEX_UNIFORM_VECTORS": {
@@ -2030,6 +2343,12 @@ const schema = new Schema({
       },
       "MEDIUM_INT": {
         "type": "Mixed"
+      },
+      "MIN": {
+        "type": "Mixed"
+      },
+      "MIN_PROGRAM_TEXEL_OFFSET": {
+        "type": "Number"
       },
       "MIRRORED_REPEAT": {
         "type": "Mixed"
@@ -2056,6 +2375,9 @@ const schema = new Schema({
         "type": "Mixed"
       },
       "NO_ERROR": {
+        "type": "Mixed"
+      },
+      "OBJECT_TYPE": {
         "type": "Mixed"
       },
       "ONE": {
@@ -2085,6 +2407,27 @@ const schema = new Schema({
       "PACK_ALIGNMENT": {
         "type": "Number"
       },
+      "PACK_ROW_LENGTH": {
+        "type": "Number"
+      },
+      "PACK_SKIP_PIXELS": {
+        "type": "Number"
+      },
+      "PACK_SKIP_ROWS": {
+        "type": "Number"
+      },
+      "PIXEL_PACK_BUFFER": {
+        "type": "Mixed"
+      },
+      "PIXEL_PACK_BUFFER_BINDING": {
+        "type": "Mixed"
+      },
+      "PIXEL_UNPACK_BUFFER": {
+        "type": "Mixed"
+      },
+      "PIXEL_UNPACK_BUFFER_BINDING": {
+        "type": "Mixed"
+      },
       "POINTS": {
         "type": "Mixed"
       },
@@ -2097,8 +2440,65 @@ const schema = new Schema({
       "POLYGON_OFFSET_UNITS": {
         "type": "Number"
       },
+      "QUERY_RESULT": {
+        "type": "Mixed"
+      },
+      "QUERY_RESULT_AVAILABLE": {
+        "type": "Mixed"
+      },
+      "R8": {
+        "type": "Mixed"
+      },
+      "R8I": {
+        "type": "Mixed"
+      },
+      "R8UI": {
+        "type": "Mixed"
+      },
+      "R8_SNORM": {
+        "type": "Mixed"
+      },
+      "R11F_G11F_B10F": {
+        "type": "Mixed"
+      },
+      "R16F": {
+        "type": "Mixed"
+      },
+      "R16I": {
+        "type": "Mixed"
+      },
+      "R16UI": {
+        "type": "Mixed"
+      },
+      "R32F": {
+        "type": "Mixed"
+      },
+      "R32I": {
+        "type": "Mixed"
+      },
+      "R32UI": {
+        "type": "Mixed"
+      },
+      "RASTERIZER_DISCARD": {
+        "type": "Boolean"
+      },
+      "READ_BUFFER": {
+        "type": "Number"
+      },
+      "READ_FRAMEBUFFER": {
+        "type": "Mixed"
+      },
+      "READ_FRAMEBUFFER_BINDING": {
+        "type": "Mixed"
+      },
+      "RED": {
+        "type": "Mixed"
+      },
       "RED_BITS": {
         "type": "Number"
+      },
+      "RED_INTEGER": {
+        "type": "Mixed"
       },
       "RENDERBUFFER": {
         "type": "Mixed"
@@ -2127,6 +2527,9 @@ const schema = new Schema({
       "RENDERBUFFER_RED_SIZE": {
         "type": "Mixed"
       },
+      "RENDERBUFFER_SAMPLES": {
+        "type": "Mixed"
+      },
       "RENDERBUFFER_STENCIL_SIZE": {
         "type": "Mixed"
       },
@@ -2142,10 +2545,82 @@ const schema = new Schema({
       "REPLACE": {
         "type": "Mixed"
       },
+      "RG": {
+        "type": "Mixed"
+      },
+      "RG8": {
+        "type": "Mixed"
+      },
+      "RG8I": {
+        "type": "Mixed"
+      },
+      "RG8UI": {
+        "type": "Mixed"
+      },
+      "RG8_SNORM": {
+        "type": "Mixed"
+      },
+      "RG16F": {
+        "type": "Mixed"
+      },
+      "RG16I": {
+        "type": "Mixed"
+      },
+      "RG16UI": {
+        "type": "Mixed"
+      },
+      "RG32F": {
+        "type": "Mixed"
+      },
+      "RG32I": {
+        "type": "Mixed"
+      },
+      "RG32UI": {
+        "type": "Mixed"
+      },
       "RGB": {
         "type": "Mixed"
       },
       "RGB5_A1": {
+        "type": "Mixed"
+      },
+      "RGB8": {
+        "type": "Mixed"
+      },
+      "RGB8I": {
+        "type": "Mixed"
+      },
+      "RGB8UI": {
+        "type": "Mixed"
+      },
+      "RGB8_SNORM": {
+        "type": "Mixed"
+      },
+      "RGB9_E5": {
+        "type": "Mixed"
+      },
+      "RGB10_A2": {
+        "type": "Mixed"
+      },
+      "RGB10_A2UI": {
+        "type": "Mixed"
+      },
+      "RGB16F": {
+        "type": "Mixed"
+      },
+      "RGB16I": {
+        "type": "Mixed"
+      },
+      "RGB16UI": {
+        "type": "Mixed"
+      },
+      "RGB32F": {
+        "type": "Mixed"
+      },
+      "RGB32I": {
+        "type": "Mixed"
+      },
+      "RGB32UI": {
         "type": "Mixed"
       },
       "RGB565": {
@@ -2157,10 +2632,67 @@ const schema = new Schema({
       "RGBA4": {
         "type": "Mixed"
       },
+      "RGBA8": {
+        "type": "Mixed"
+      },
+      "RGBA8I": {
+        "type": "Mixed"
+      },
+      "RGBA8UI": {
+        "type": "Mixed"
+      },
+      "RGBA8_SNORM": {
+        "type": "Mixed"
+      },
+      "RGBA16F": {
+        "type": "Mixed"
+      },
+      "RGBA16I": {
+        "type": "Mixed"
+      },
+      "RGBA16UI": {
+        "type": "Mixed"
+      },
+      "RGBA32F": {
+        "type": "Mixed"
+      },
+      "RGBA32I": {
+        "type": "Mixed"
+      },
+      "RGBA32UI": {
+        "type": "Mixed"
+      },
+      "RGBA_INTEGER": {
+        "type": "Mixed"
+      },
+      "RGB_INTEGER": {
+        "type": "Mixed"
+      },
+      "RG_INTEGER": {
+        "type": "Mixed"
+      },
       "SAMPLER_2D": {
         "type": "Mixed"
       },
+      "SAMPLER_2D_ARRAY": {
+        "type": "Mixed"
+      },
+      "SAMPLER_2D_ARRAY_SHADOW": {
+        "type": "Mixed"
+      },
+      "SAMPLER_2D_SHADOW": {
+        "type": "Mixed"
+      },
+      "SAMPLER_3D": {
+        "type": "Mixed"
+      },
+      "SAMPLER_BINDING": {
+        "type": "Mixed"
+      },
       "SAMPLER_CUBE": {
+        "type": "Mixed"
+      },
+      "SAMPLER_CUBE_SHADOW": {
         "type": "Mixed"
       },
       "SAMPLES": {
@@ -2198,6 +2730,9 @@ const schema = new Schema({
       "SCISSOR_TEST": {
         "type": "Boolean"
       },
+      "SEPARATE_ATTRIBS": {
+        "type": "Mixed"
+      },
       "SHADER_TYPE": {
         "type": "Mixed"
       },
@@ -2205,6 +2740,12 @@ const schema = new Schema({
         "type": "String"
       },
       "SHORT": {
+        "type": "Mixed"
+      },
+      "SIGNALED": {
+        "type": "Mixed"
+      },
+      "SIGNED_NORMALIZED": {
         "type": "Mixed"
       },
       "SRC_ALPHA": {
@@ -2216,7 +2757,25 @@ const schema = new Schema({
       "SRC_COLOR": {
         "type": "Mixed"
       },
+      "SRGB": {
+        "type": "Mixed"
+      },
+      "SRGB8": {
+        "type": "Mixed"
+      },
+      "SRGB8_ALPHA8": {
+        "type": "Mixed"
+      },
+      "STATIC_COPY": {
+        "type": "Mixed"
+      },
       "STATIC_DRAW": {
+        "type": "Mixed"
+      },
+      "STATIC_READ": {
+        "type": "Mixed"
+      },
+      "STENCIL": {
         "type": "Mixed"
       },
       "STENCIL_ATTACHMENT": {
@@ -2279,11 +2838,35 @@ const schema = new Schema({
       "STENCIL_WRITEMASK": {
         "type": "Number"
       },
+      "STREAM_COPY": {
+        "type": "Mixed"
+      },
       "STREAM_DRAW": {
+        "type": "Mixed"
+      },
+      "STREAM_READ": {
         "type": "Mixed"
       },
       "SUBPIXEL_BITS": {
         "type": "Number"
+      },
+      "SYNC_CONDITION": {
+        "type": "Mixed"
+      },
+      "SYNC_FENCE": {
+        "type": "Mixed"
+      },
+      "SYNC_FLAGS": {
+        "type": "Mixed"
+      },
+      "SYNC_FLUSH_COMMANDS_BIT": {
+        "type": "Mixed"
+      },
+      "SYNC_GPU_COMMANDS_COMPLETE": {
+        "type": "Mixed"
+      },
+      "SYNC_STATUS": {
+        "type": "Mixed"
       },
       "TEXTURE": {
         "type": "Mixed"
@@ -2387,10 +2970,31 @@ const schema = new Schema({
       "TEXTURE_2D": {
         "type": "Mixed"
       },
+      "TEXTURE_2D_ARRAY": {
+        "type": "Mixed"
+      },
+      "TEXTURE_3D": {
+        "type": "Mixed"
+      },
+      "TEXTURE_BASE_LEVEL": {
+        "type": "Mixed"
+      },
       "TEXTURE_BINDING_2D": {
         "type": "Mixed"
       },
+      "TEXTURE_BINDING_2D_ARRAY": {
+        "type": "Mixed"
+      },
+      "TEXTURE_BINDING_3D": {
+        "type": "Mixed"
+      },
       "TEXTURE_BINDING_CUBE_MAP": {
+        "type": "Mixed"
+      },
+      "TEXTURE_COMPARE_FUNC": {
+        "type": "Mixed"
+      },
+      "TEXTURE_COMPARE_MODE": {
         "type": "Mixed"
       },
       "TEXTURE_CUBE_MAP": {
@@ -2414,16 +3018,73 @@ const schema = new Schema({
       "TEXTURE_CUBE_MAP_POSITIVE_Z": {
         "type": "Mixed"
       },
+      "TEXTURE_IMMUTABLE_FORMAT": {
+        "type": "Mixed"
+      },
+      "TEXTURE_IMMUTABLE_LEVELS": {
+        "type": "Mixed"
+      },
       "TEXTURE_MAG_FILTER": {
         "type": "Mixed"
       },
+      "TEXTURE_MAX_LEVEL": {
+        "type": "Mixed"
+      },
+      "TEXTURE_MAX_LOD": {
+        "type": "Mixed"
+      },
       "TEXTURE_MIN_FILTER": {
+        "type": "Mixed"
+      },
+      "TEXTURE_MIN_LOD": {
+        "type": "Mixed"
+      },
+      "TEXTURE_WRAP_R": {
         "type": "Mixed"
       },
       "TEXTURE_WRAP_S": {
         "type": "Mixed"
       },
       "TEXTURE_WRAP_T": {
+        "type": "Mixed"
+      },
+      "TIMEOUT_EXPIRED": {
+        "type": "Mixed"
+      },
+      "TIMEOUT_IGNORED": {
+        "type": "Mixed"
+      },
+      "TRANSFORM_FEEDBACK": {
+        "type": "Mixed"
+      },
+      "TRANSFORM_FEEDBACK_ACTIVE": {
+        "type": "Boolean"
+      },
+      "TRANSFORM_FEEDBACK_BINDING": {
+        "type": "Mixed"
+      },
+      "TRANSFORM_FEEDBACK_BUFFER": {
+        "type": "Mixed"
+      },
+      "TRANSFORM_FEEDBACK_BUFFER_BINDING": {
+        "type": "Mixed"
+      },
+      "TRANSFORM_FEEDBACK_BUFFER_MODE": {
+        "type": "Mixed"
+      },
+      "TRANSFORM_FEEDBACK_BUFFER_SIZE": {
+        "type": "Mixed"
+      },
+      "TRANSFORM_FEEDBACK_BUFFER_START": {
+        "type": "Mixed"
+      },
+      "TRANSFORM_FEEDBACK_PAUSED": {
+        "type": "Boolean"
+      },
+      "TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN": {
+        "type": "Mixed"
+      },
+      "TRANSFORM_FEEDBACK_VARYINGS": {
         "type": "Mixed"
       },
       "TRIANGLES": {
@@ -2435,6 +3096,60 @@ const schema = new Schema({
       "TRIANGLE_STRIP": {
         "type": "Mixed"
       },
+      "UNIFORM_ARRAY_STRIDE": {
+        "type": "Mixed"
+      },
+      "UNIFORM_BLOCK_ACTIVE_UNIFORMS": {
+        "type": "Mixed"
+      },
+      "UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES": {
+        "type": "Mixed"
+      },
+      "UNIFORM_BLOCK_BINDING": {
+        "type": "Mixed"
+      },
+      "UNIFORM_BLOCK_DATA_SIZE": {
+        "type": "Mixed"
+      },
+      "UNIFORM_BLOCK_INDEX": {
+        "type": "Mixed"
+      },
+      "UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER": {
+        "type": "Mixed"
+      },
+      "UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER": {
+        "type": "Mixed"
+      },
+      "UNIFORM_BUFFER": {
+        "type": "Mixed"
+      },
+      "UNIFORM_BUFFER_BINDING": {
+        "type": "Mixed"
+      },
+      "UNIFORM_BUFFER_OFFSET_ALIGNMENT": {
+        "type": "Number"
+      },
+      "UNIFORM_BUFFER_SIZE": {
+        "type": "Mixed"
+      },
+      "UNIFORM_BUFFER_START": {
+        "type": "Mixed"
+      },
+      "UNIFORM_IS_ROW_MAJOR": {
+        "type": "Mixed"
+      },
+      "UNIFORM_MATRIX_STRIDE": {
+        "type": "Mixed"
+      },
+      "UNIFORM_OFFSET": {
+        "type": "Mixed"
+      },
+      "UNIFORM_SIZE": {
+        "type": "Mixed"
+      },
+      "UNIFORM_TYPE": {
+        "type": "Mixed"
+      },
       "UNPACK_ALIGNMENT": {
         "type": "Number"
       },
@@ -2444,13 +3159,67 @@ const schema = new Schema({
       "UNPACK_FLIP_Y_WEBGL": {
         "type": "Boolean"
       },
+      "UNPACK_IMAGE_HEIGHT": {
+        "type": "Number"
+      },
       "UNPACK_PREMULTIPLY_ALPHA_WEBGL": {
         "type": "Boolean"
+      },
+      "UNPACK_ROW_LENGTH": {
+        "type": "Number"
+      },
+      "UNPACK_SKIP_IMAGES": {
+        "type": "Number"
+      },
+      "UNPACK_SKIP_PIXELS": {
+        "type": "Number"
+      },
+      "UNPACK_SKIP_ROWS": {
+        "type": "Number"
+      },
+      "UNSIGNALED": {
+        "type": "Mixed"
       },
       "UNSIGNED_BYTE": {
         "type": "Mixed"
       },
       "UNSIGNED_INT": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_INT_2_10_10_10_REV": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_INT_5_9_9_9_REV": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_INT_10F_11F_11F_REV": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_INT_24_8": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_INT_SAMPLER_2D": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_INT_SAMPLER_2D_ARRAY": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_INT_SAMPLER_3D": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_INT_SAMPLER_CUBE": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_INT_VEC2": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_INT_VEC3": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_INT_VEC4": {
+        "type": "Mixed"
+      },
+      "UNSIGNED_NORMALIZED": {
         "type": "Mixed"
       },
       "UNSIGNED_SHORT": {
@@ -2474,10 +3243,19 @@ const schema = new Schema({
       "VERSION": {
         "type": "String"
       },
+      "VERTEX_ARRAY_BINDING": {
+        "type": "Mixed"
+      },
       "VERTEX_ATTRIB_ARRAY_BUFFER_BINDING": {
         "type": "Mixed"
       },
+      "VERTEX_ATTRIB_ARRAY_DIVISOR": {
+        "type": "Mixed"
+      },
       "VERTEX_ATTRIB_ARRAY_ENABLED": {
+        "type": "Mixed"
+      },
+      "VERTEX_ATTRIB_ARRAY_INTEGER": {
         "type": "Mixed"
       },
       "VERTEX_ATTRIB_ARRAY_NORMALIZED": {
@@ -2511,6 +3289,9 @@ const schema = new Schema({
         "3": {
           "type": "Number"
         }
+      },
+      "WAIT_FAILED": {
+        "type": "Mixed"
       },
       "ZERO": {
         "type": "Mixed"
