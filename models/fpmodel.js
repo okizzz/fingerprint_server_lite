@@ -100,6 +100,9 @@ const schema = new Schema({
     "appVersion": {
       "type": "String"
     },
+    "buildID": {
+      "type": "String"
+    },
     "connection": {
       "downlink": {
         "type": "Number"
@@ -140,6 +143,9 @@ const schema = new Schema({
     "maxTouchPoints": {
       "type": "Number"
     },
+    "oscpu": {
+      "type": "String"
+    },
     "onLine": {
       "type": "Boolean"
     },
@@ -160,6 +166,9 @@ const schema = new Schema({
     },
     "vendorSub": {
       "type": "String"
+    },
+    "webdriver": {
+      "type": "Boolean"
     }
   },
   "screen": {
@@ -3470,14 +3479,14 @@ const schema = new Schema({
 })
 
 schema.methods.getHash = (body) => {
-	body.navigator.connection = {}
-	let hashObj = sha1(JSON.stringify(body))
-	return hashObj
+  body.navigator.connection = {}
+  let hashObj = sha1(JSON.stringify(body))
+  return hashObj
 }
 
 schema.virtual('body')
   .set(function(body) {
-  	this.hash = this.getHash(body)
+    this.hash = this.getHash(body)
   })
 
 module.exports = model('Fingerprint', schema)
