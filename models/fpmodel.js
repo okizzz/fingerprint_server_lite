@@ -1574,7 +1574,8 @@ const schema = new Schema({
         "type": "Mixed"
       },
       "ACTIVE_TEXTURE": {
-        "type": "Number"
+        "type": "Number",
+        required: true
       },
       "ACTIVE_UNIFORMS": {
         "type": "Mixed"
@@ -2551,7 +2552,8 @@ const schema = new Schema({
         "type": "Mixed"
       },
       "RENDERER": {
-        "type": "String"
+        "type": "String",
+        required: true
       },
       "REPEAT": {
         "type": "Mixed"
@@ -3252,10 +3254,12 @@ const schema = new Schema({
         "type": "Mixed"
       },
       "VENDOR": {
-        "type": "String"
+        "type": "String",
+        required: true
       },
       "VERSION": {
-        "type": "String"
+        "type": "String",
+        required: true
       },
       "VERTEX_ARRAY_BINDING": {
         "type": "Mixed"

@@ -43,7 +43,6 @@ router.post('/create', async (req, res) => {
      fonts: req.body.fonts,
      body: req.body
   })
-  console.log(req.body.navigatorparams)
   await fingerprint.save((err, fingerprint) => {
     if (err){
       return res.status(500)
