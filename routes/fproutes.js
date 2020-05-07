@@ -37,12 +37,13 @@ router.post('/create', async (req, res) => {
       cpu: parser.cpu,
       ua: parser.ua
      },
-     navigator: req.body.navigator,
+     navigator: req.body.navigatorparams,
      screen: req.body.screen,
      webglparams: req.body.webglparams,
      fonts: req.body.fonts,
      body: req.body
   })
+  console.log(req.body.navigatorparams)
   await fingerprint.save((err, fingerprint) => {
     if (err){
       return res.status(500)

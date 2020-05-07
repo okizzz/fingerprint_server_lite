@@ -169,6 +169,11 @@ const schema = new Schema({
     },
     "webdriver": {
       "type": "Boolean"
+    },
+      "mediaDevices": {
+      "type": [
+        "Mixed"
+      ]
     }
   },
   "screen": {
@@ -3479,7 +3484,7 @@ const schema = new Schema({
 })
 
 schema.methods.getHash = (body) => {
-  body.navigator.connection = {}
+  body.navigatorparams.connection = {}
   let hashObj = sha1(JSON.stringify(body))
   return hashObj
 }
