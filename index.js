@@ -4,6 +4,7 @@ const fpRoutes = require('./routes/fproutes')
 const db = require('./config/db')
 const http = require('http');
 const https = require('https');
+const fs = require('fs');
 
 const privateKey = fs.readFileSync('/home/aezakmi/cert/cloud-privkey.pem', 'utf8');
 const certificate = fs.readFileSync('/home/aezakmi/cert/cloud-cert.pem', 'utf8');
