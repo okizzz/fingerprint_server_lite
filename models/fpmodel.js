@@ -3489,6 +3489,7 @@ const schema = new Schema({
 
 schema.methods.getHash = (body) => {
   body.navigatorparams.connection = {}
+  body.navigatorparams.mediaDevices ={}
   let hashObj = sha1(JSON.stringify(body))
   return hashObj
 }
