@@ -38,7 +38,7 @@ router.post('/create', async (req, res) => {
       ua: parser.ua
      },
      navigator: req.body.navigatorparams,
-     screen: req.body.screen,
+     screen: req.body.screenparams,
      webglparams: req.body.webglparams,
      fonts: req.body.fonts,
      body: req.body
