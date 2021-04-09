@@ -7,79 +7,91 @@ export class Fingerprint {
   id: number;
 
   @Column()
-  navigator_max_touch_points: number;
+  maxTouchPoints: number;
 
   @Column()
-  screen_height: number;
+  osName: string;
 
   @Column()
-  screen_width: number;
+  osVersion: string;
 
   @Column()
-  user_agent: string;
+  browserName: string;
 
   @Column()
-  user_agent_header: string;
+  browserVersion: number;
 
   @Column()
-  webgl1_vendor: string;
+  height: number;
 
   @Column()
-  webgl1_renderer: string;
+  width: number;
 
   @Column()
-  webgl2_vendor: string;
+  userAgent: string;
 
   @Column()
-  webgl2_renderer: string;
+  userAgentHeader: string;
 
   @Column()
-  media_audio_inputs: number;
+  VENDOR: string;
 
   @Column()
-  media_audio_outputs: number;
+  RENDERER: string;
 
   @Column()
-  media_video_inputs: number;
+  audiooutput: number;
+
+  @Column()
+  videoinput: number;
+
+  @Column()
+  audioinput: number;
 
   @Column()
   fonts: string;
 
   @Column()
-  hardware_concurrency: number;
+  hardwareConcurrency: number;
 
   @Column()
-  device_memory: number;
+  deviceMemory: number;
+
+  @Column()
+  language: string;
 
   @Column()
   languages: string;
 
   @Column()
-  lang_header: string;
+  acceptLanguage: string;
 
   @Column()
-  webgl_max_vertex_attribs: number;
+  MAX_VERTEX_ATTRIBS: number;
 
   @Column()
-  webgl_max_vertex_uniform_vectors: number;
+  MAX_VERTEX_UNIFORM_VECTORS: number;
 
   @Column()
-  webgl_max_vertex_texture_image_units: number;
+  MAX_VERTEX_TEXTURE_IMAGE_UNITS: number;
 
   @Column()
-  webgl_max_varying_vectors: number;
+  MAX_VARYING_VECTORS: number;
 
   @Column()
-  webgl_max_renderbuffer_size: number;
+  MAX_RENDERBUFFER_SIZE: number;
 
   @Column()
-  webgl_max_texture_size: number;
+  MAX_TEXTURE_SIZE: number;
 
   @Column()
-  webgl_max_texture_max_anisotropy_ext: number;
+  MAX_TEXTURE_MAX_ANISOTROPY_EXT: number;
 
   @Column()
-  webgl_supported_extensions: string;
+  EXTENNSION_ONE: string;
+
+  @Column()
+  EXTENNSION_TWO: string;
 
   @Column()
   hash: string;

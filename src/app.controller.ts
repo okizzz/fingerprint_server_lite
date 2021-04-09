@@ -1,12 +1,14 @@
-import { Body, Controller, Post, Headers, Res, HttpStatus } from "@nestjs/common";
+import { Body, Controller, Post, Headers, Res, HttpStatus, UseGuards } from "@nestjs/common";
 import { AppService } from "./app.service";
 import { IsniferfpInterface } from "./sniferfp.interface";
 import { Response } from "express";
+import { FingerprintGuard } from "./fingerprint.guard";
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @UseGuards(FingerprintGuard)
   @Post("create")
   async create(
     @Headers("user-agent") userAgent: string,
