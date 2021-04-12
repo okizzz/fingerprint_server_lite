@@ -6,81 +6,96 @@ export class Fingerprint {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  navigator_max_touch_points: number;
+  @Column({ nullable: false })
+  maxTouchPoints: number;
 
-  @Column()
-  screen_height: number;
+  @Column({ nullable: false })
+  osName: string;
 
-  @Column()
-  screen_width: number;
+  @Column({ nullable: false })
+  osVersion: string;
 
-  @Column()
-  user_agent: string;
+  @Column({ nullable: false })
+  browserName: string;
 
-  @Column()
-  user_agent_header: string;
+  @Column({ nullable: false })
+  browserVersion: number;
 
-  @Column()
-  webgl1_vendor: string;
+  @Column({ nullable: false })
+  height: number;
 
-  @Column()
-  webgl1_renderer: string;
+  @Column({ nullable: false })
+  width: number;
 
-  @Column()
-  webgl2_vendor: string;
+  @Column({ nullable: false })
+  userAgent: string;
 
-  @Column()
-  webgl2_renderer: string;
+  @Column({ nullable: false })
+  userAgentHeader: string;
 
-  @Column()
-  media_audio_inputs: number;
+  @Column({ nullable: false })
+  VENDOR: string;
 
-  @Column()
-  media_audio_outputs: number;
+  @Column({ nullable: false })
+  RENDERER: string;
 
-  @Column()
-  media_video_inputs: number;
+  @Column({ nullable: false })
+  audiooutput: number;
 
-  @Column()
+  @Column({ nullable: false })
+  videoinput: number;
+
+  @Column({ nullable: false })
+  audioinput: number;
+
+  @Column({ nullable: false })
   fonts: string;
 
-  @Column()
-  hardware_concurrency: number;
+  @Column({ nullable: false })
+  hardwareConcurrency: number;
 
-  @Column()
-  device_memory: number;
+  @Column({ nullable: false })
+  deviceMemory: number;
 
-  @Column()
+  @Column({ nullable: false })
+  language: string;
+
+  @Column({ nullable: false })
   languages: string;
 
-  @Column()
-  lang_header: string;
+  @Column({ nullable: false })
+  acceptLanguage: string;
 
-  @Column()
-  webgl_max_vertex_attribs: number;
+  @Column({ nullable: false })
+  MAX_VERTEX_ATTRIBS: number;
 
-  @Column()
-  webgl_max_vertex_uniform_vectors: number;
+  @Column({ nullable: false })
+  MAX_VERTEX_UNIFORM_VECTORS: number;
 
-  @Column()
-  webgl_max_vertex_texture_image_units: number;
+  @Column({ nullable: false })
+  MAX_VERTEX_TEXTURE_IMAGE_UNITS: number;
 
-  @Column()
-  webgl_max_varying_vectors: number;
+  @Column({ nullable: false })
+  MAX_VARYING_VECTORS: number;
 
-  @Column()
-  webgl_max_renderbuffer_size: number;
+  @Column({ nullable: false })
+  MAX_RENDERBUFFER_SIZE: number;
 
-  @Column()
-  webgl_max_texture_size: number;
+  @Column({ nullable: false })
+  MAX_TEXTURE_SIZE: number;
 
-  @Column()
-  webgl_max_texture_max_anisotropy_ext: number;
+  @Column({ nullable: false })
+  MAX_TEXTURE_MAX_ANISOTROPY_EXT: number;
 
-  @Column()
-  webgl_supported_extensions: string;
+  @Column({ nullable: false })
+  EXTENNSION_ONE: string;
 
-  @Column()
+  @Column({ default: null, nullable: true })
+  EXTENNSION_TWO: string;
+
+  @Column({ nullable: false })
   hash: string;
+
+  @Column({ nullable: true })
+  ip: string;
 }
