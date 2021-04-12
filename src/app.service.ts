@@ -14,18 +14,18 @@ export class AppService {
     private readonly fingerPrintRepository: Repository<Fingerprint>,
   ) {}
 
-  async save(userAgent: string, acceptLanguage: string, fingerprint: IsniferfpInterface): Promise<any> {
-    const pc = new UAParser(userAgent);
+  async save(userAgent: string, acceptLanguage: string, fingerprint: IsniferfpInterface, ip: string): Promise<void> {
+    const parser = new UAParser(userAgent);
     const result: IresultfpInterface = Object.assign(fingerprint, {
       userAgentHeader: userAgent,
       acceptLanguage,
-      osName: pc.getOS().name,
-      osVersion: pc.getOS().version,
-      browserName: pc.getBrowser().name,
-      browserVersion: +pc.getBrowser().version.split(".")[0],
+      osName: parser.getOS().name,
+      osVersion: parser.getOS().version,
+      browserName: parser.getBrowser().name,
+      browserVersion: +parser.getBrowser().version.split(".")[0],
     });
     try {
-      await this.fingerPrintRepository.save({ ...result, hash: md5(JSON.stringify(result)) });
+      await this.fingerPrintRepository.save({ ...result, hash: md5(JSON.stringify(result)), ip });
     } catch (e) {
       throw e;
     }

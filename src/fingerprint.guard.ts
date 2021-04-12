@@ -1,6 +1,7 @@
 import { Headers, CanActivate, ExecutionContext, Injectable } from "@nestjs/common";
 import { Observable } from "rxjs";
 import { IsniferfpInterface } from "./sniferfp.interface";
+import { UAParser } from "ua-parser-js";
 
 @Injectable()
 export class FingerprintGuard implements CanActivate {
@@ -10,7 +11,16 @@ export class FingerprintGuard implements CanActivate {
   }
 
   validate(acceptLanguage: string, userAgentHeader: string, body: IsniferfpInterface) {
-    if (acceptLanguage && userAgentHeader && body) return true;
+    const headerParseUa = new UAParser(userAgentHeader);
+    const bodyParseUa = new UAParser(body.userAgent);
+    if (
+      acceptLanguage &&
+      body &&
+      headerParseUa.getEngine().name == "Blink" &&
+      bodyParseUa.getEngine().name == "Blink" &&
+      userAgentHeader == body.userAgent
+    )
+      return true;
     return false;
   }
 }

@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Headers, Res, HttpStatus, UseGuards } from "@nestjs/common";
+import { Body, Controller, Post, Headers, Res, HttpStatus, UseGuards, Ip } from "@nestjs/common";
 import { AppService } from "./app.service";
 import { IsniferfpInterface } from "./sniferfp.interface";
 import { Response } from "express";
@@ -11,13 +11,15 @@ export class AppController {
   @UseGuards(FingerprintGuard)
   @Post("create")
   async create(
-    @Headers("user-agent") userAgent: string,
+    @Ip() ip: string,
+    @Headers("user-agent")
+    userAgent: string,
     @Headers("Accept-Language") acceptLanguage: string,
     @Body() fingerprint: IsniferfpInterface,
     @Res() res: Response,
   ) {
     try {
-      await this.appService.save(userAgent, acceptLanguage, fingerprint);
+      await this.appService.save(userAgent, acceptLanguage, fingerprint, ip);
       return res.status(HttpStatus.CREATED).send("Created");
     } catch (error) {
       return res.status(HttpStatus.BAD_REQUEST).send(error.message);
