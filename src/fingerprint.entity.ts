@@ -90,7 +90,7 @@ export class Fingerprint {
   @Column({ nullable: false })
   EXTENNSION_ONE: string;
 
-  @Column({ nullable: false })
+  @Column({ default: null, nullable: true })
   EXTENNSION_TWO: string;
 
   @Column({ nullable: false })
