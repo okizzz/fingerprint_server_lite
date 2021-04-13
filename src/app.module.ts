@@ -9,8 +9,8 @@ import { Fingerprint } from "./fingerprint.entity";
     TypeOrmModule.forFeature([Fingerprint]),
     TypeOrmModule.forRoot({
       type: "postgres",
-      host: "db",
-      port: 5434,
+      host: process.env.DB_HOST,
+      port: 5432,
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
